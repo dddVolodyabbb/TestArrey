@@ -1,32 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
     internal class Program
     {
+        private const int nomberCount = 20;
+        private static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int[] arr = new int[10];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i]=random.Next(0,11);
-            }
-
-            foreach (var i in arr)
-            {
-                Console.Write(i+" ");
-            }
-            Console.WriteLine();
-            Array.Sort(arr);
-            foreach (var i in arr)
-            {
-                Console.Write(i+ " ");
-            }
+            var arrey = Enumerable.Range(0, nomberCount).Select(_ => rnd.Next(10)).ToArray();
+            arrey = arrey.OrderBy(x=>x).ToArray();
             Console.ReadKey();
         }
     }
