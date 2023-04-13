@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ConsoleApp1.Extensions;
 
 namespace ConsoleApp1
 {
@@ -14,8 +15,11 @@ namespace ConsoleApp1
             var arrey = Enumerable.Range(0, nomberCount)
                 .Select(_ => rnd.Next(nomberStart, nomberEnd+1))
                 .ToArray();
+
             arrey = arrey.OrderBy(x=>x).ToArray();
-            Console.Write(string.Join(", ", arrey));
+
+            arrey.Select((Value,index)=>$"{index}:{Value}").ForEach(Console.WriteLine);
+            
             Console.ReadKey();
         }
     }
