@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ConsoleApp1.Extensions;
 
 namespace ConsoleApp1
 {
@@ -14,8 +15,6 @@ namespace ConsoleApp1
 
             arrey.Select((Value,index)=>$"{index}: {Value}").ForEach(Console.WriteLine);
             
-            Console.Write(string.Join(", ", arrey));
-            Console.Write(string.Join(", ", arrey));
             Console.ReadKey();
         }
     }
