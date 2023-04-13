@@ -11,6 +11,10 @@ namespace ConsoleApp1
         {
             var arrey = Enumerable.Range(0, nomberCount).Select(_ => rnd.Next(10)).ToArray();
             arrey = arrey.OrderBy(x=>x).ToArray();
+
+            arrey.Select((Value,index)=>$"{index}: {Value}").ForEach(Console.WriteLine);
+            
+            Console.Write(string.Join(", ", arrey));
             Console.Write(string.Join(", ", arrey));
             Console.ReadKey();
         }
