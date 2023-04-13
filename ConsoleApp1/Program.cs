@@ -18,7 +18,9 @@ namespace ConsoleApp1
 
             arrey = arrey.OrderBy(x=>x).ToArray();
 
-            arrey.Select((Value,index)=>$"{index}:{Value}").ForEach(Console.WriteLine);
+   
+            arrey.Select((Value,index)=>$"{index}: {Value}").ForEach(Console.WriteLine);
+main
             
             Console.ReadKey();
         }

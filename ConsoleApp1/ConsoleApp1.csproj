@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extension\EnumerableExtensions.cs" />
+
+  
+
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+ main
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
