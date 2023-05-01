@@ -13,6 +13,7 @@ namespace ConsoleApp1.Extensions
             foreach (var value in values)
             {
                 action(value);
+                    //хуй нээээээээээ
             }
         }
     }
